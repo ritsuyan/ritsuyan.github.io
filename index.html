@@ -1,47 +1,124 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport"
-	 content="width=device-width,height=device-height,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
-<title>2048</title>
-<link href="css/style.css" type="text/css" rel="stylesheet" />
-<script src="js/jquery-1.10.1.js" type="text/javascript"></script>
-<script src="js/Support.js"></script>
-<script src="js/animation.js" type="text/javascript"></script>
-<script src="js/main.js"  type="text/javascript"></script>
-</head>
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+      <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+      <script src="./js/jq_scroll.js"></script>
+      <script type="text/javascript" src="./bower_components/jquery-touchswipe/jquery.touchSwipe.min.js"></script>
+    <!--  <script src="./js/scroll.js"></script>
+    <!-- Bootstrap -->
+    <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+      <script type="text/javascript">
+          $(document).ready(function(){
+              $("#wrapper").Scroll({line:1,speed:100,timer:1000,up:"but_up",down:"but_down"});
 
-<body>
-	<header>
-    	<h1>私人 2048</h1>
-        <a href="javascript:newgame();" id="bot">New Game</a>
-        <p>score:<span id="score">0</span></p>
-    </header>
-    
-    <div id="main">
-    	<div class="main-box" id="box-0-0"></div>
-    	<div class="main-box" id="box-0-1"></div>
-        <div class="main-box" id="box-0-2"></div>
-        <div class="main-box" id="box-0-3"></div>
-        
-        <div class="main-box" id="box-1-0"></div>
-    	<div class="main-box" id="box-1-1"></div>
-        <div class="main-box" id="box-1-2"></div>
-        <div class="main-box" id="box-1-3"></div>
-        
-        <div class="main-box" id="box-2-0"></div>
-    	<div class="main-box" id="box-2-1"></div>
-        <div class="main-box" id="box-2-2"></div>
-        <div class="main-box" id="box-2-3"></div>
-        
-        <div class="main-box" id="box-3-0"></div>
-    	<div class="main-box" id="box-3-1"></div>
-        <div class="main-box" id="box-3-2"></div>
-        <div class="main-box" id="box-3-3"></div>
-    </div>
- <!--   <div class="over">
-    	<div class="over-frame">GAMEMOVE!</div>
-    </div>-->
-</body>
+          })
+      </script>
+  </head>
+  <body>
+  <div class="container_wrap">
+           <h1 class="page_title">KPI 模板 </h1>
+
+        <div class="row indContainer">
+
+            <h2 class="row_title ">销售额</h2>
+                <p class="curr_goods">种类一</p>
+            <h4 class="curr_month">2013/07-2013/08</h4>
+
+            <!--the grid begin   -->
+
+            <div class="col-xs-6 inde sales_vs_last active_box" data-inde="销售额">
+                <p class="curr_inde_title">销售额  &nbsp;(元)</p>
+                <span class="tringle  right"></span>
+                <a href="#" class="curr_data">789,221,668</a>
+                <a href="#" class="last_data">623,878,456</a>
+            </div>
+
+             <div class="col-xs-6 inde sales" data-inde="销售额vs目标销售额(元)">
+                 <p class="curr_inde_title">销售额vs<br>目标销售额  &nbsp; (元)</p>
+                 <span class="tringle right"></span>
+                 <a href="#" class="curr_data">789,221,668</a>
+                 <a href="#" class="last_data">623,878,456</a>
+            </div>
+
+             <div class="col-xs-6 inde average" data-inde="销售额vs去年销售额(元)">
+                 <p class="curr_inde_title">销售额vs<br>去年销售额  &nbsp; (元)</p>
+                 <span class="tringle right"></span>
+                 <a href="#" class="curr_data">789,221,668</a>
+                 <a href="#" class="last_data">623,878,456</a>
+            </div>
+
+             <div class="col-xs-6 inde profit" data-inde="销售额vs国内同类销售额(元)">
+                 <p class="curr_inde_title">销售额vs<br>国内同类销售额&nbsp;(元)</p>
+                 <span class="tringle right"></span>
+                 <a href="#" class="curr_data">789,221,668</a>
+                 <a href="#" class="last_data">623,878,456</a>
+            </div>
+
+             <div class="col-xs-6 inde total" data-inde="销售额vs国际同类销售额(元)">
+                 <p class="curr_inde_title">销售额vs<br>国际同类销售额&nbsp;(元)</p>
+                 <span class="tringle right"></span>
+                 <a href="#" class="curr_data">789,221,668</a>
+                 <a href="#" class="last_data">623,878,456</a>
+            </div>
+
+             <div class="col-xs-6 inde transaction" data-inde="总处方数">
+                 <p class="curr_inde_title">总处方数  &nbsp; (个)</p>
+                 <span class="tringle right"></span>
+                 <a href="#" class="curr_data">789,221,668</a>
+                 <a href="#" class="last_data">623,878,456</a>
+            </div>
+
+            <!-- wait to dynamic add -->
+            <!-- the grid end     -->
+            <div class="clearfix"></div>
+            <div class="togglePage left">
+                <a class="toggle_circle active_circle"></a>
+                <a class="toggle_circle"></a>
+            </div>   <!-- togglePage  end -->
+        </div>  <!--  indeContainer end -->
+
+
+
+        <div class="indecatorArr">
+            <div class="inde_detail">
+                <span ><i class="arrow_down"></i>&nbsp;类别</span>
+                <span class="right sales_inde"><a>销售额 </a> <i class="arrow_top"></i></span>
+            </div>   <!-- indecatorArr  end -->
+
+            <div id="wrapper">
+                <div id="scroller">
+                    <ul>
+                        <li class="curr_type_goods list_goods">种类一 <span class=""></span></li>
+                        <li class="list_goods">种类二    <span class=" "></span></li>
+                        <li class="list_goods">种类三    <span class=" "></span></li>
+                        <li class="list_goods">种类四    <span class=" "></span></li>
+                        <li class="list_goods">种类五    <span class=" "></span></li>
+                        <li class="list_goods">种类六    <span class=" "></span></li>
+                    </ul>
+                </div>
+            </div>
+  </div>
+</div>     <!-- container_wrapper end  -->
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+
+ <script src="./js/scroll.js" ></script>
+  </body>
 </html>

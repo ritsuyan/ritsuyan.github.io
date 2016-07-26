@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+</head>
+<body>
+<div class="col-xs-6 inde sales_vs_last active_box" data-inde="inde_1">
+    <p class="curr_inde_title">销售额  &nbsp;(元)</p>
+    <span class="tringle  right"></span>
+    <a href="#" class="curr_data">789,221,668</a>
+    <a href="#" class="last_data">623,878,456</a>
+</div>
+
+<div class="col-xs-6 inde sales">
+    <p class="curr_inde_title">销售额vs<br>目标销售额  &nbsp; (元)</p>
+    <span class="tringle"></span>
+    <a href="#" class="curr_data">789,221,668</a>
+    <a href="#" class="last_data">623,878,456</a>
+</div>
+
+<div class="col-xs-6 inde average">
+    <p class="curr_inde_title">销售额vs<br>去年销售额  &nbsp; (元)</p>
+    <span class="tringle"></span>
+    <a href="#" class="curr_data">789,221,668</a>
+    <a href="#" class="last_data">623,878,456</a>
+</div>
+
+<div class="col-xs-6 inde profit">
+    <p class="curr_inde_title">销售额vs<br>国内同类销售额&nbsp;(元)</p>
+    <span class="tringle"></span>
+    <a href="#" class="curr_data">789,221,668</a>
+    <a href="#" class="last_data">623,878,456</a>
+</div>
+
+<div class="col-xs-6 inde total">
+    <p class="curr_inde_title">销售额vs<br>国际同类销售额&nbsp;(元)</p>
+    <span class="tringle"></span>
+    <a href="#" class="curr_data">789,221,668</a>
+    <a href="#" class="last_data">623,878,456</a>
+</div>
+
+<div class="col-xs-6 inde transaction">
+    <p class="curr_inde_title">总处方数  &nbsp; (个)</p>
+    <span class="tringle"></span>
+    <a href="#" class="curr_data">789,221,668</a>
+    <a href="#" class="last_data">623,878,456</a>
+</div>
+<script>
+      $('.inde').on('click', function (e) {
+          alert($(this).index())
+      })
+</script>
+</body>
+</html>

@@ -1,0 +1,414 @@
+/**********      page        ich
+
+**********
+		TODO the curr respon device base on ip6
+
+**********/
+
+/**********      public         css   ********************/
+*{
+	 margin: 0;
+	padding: 0;
+}
+a:hover,link{
+	 text-decoration: none;
+}
+html,body{
+	 height: 100%;
+}
+li{
+	 list-style: none;
+
+}
+h1,h2,h3,h4,h5{
+	 margin: 0;
+	padding: 0;
+}
+a{
+	 text-decoration: none;
+}
+span{
+	 margin: 0;
+	padding: 0;
+	display:  inline !important;
+}
+.left{
+	 float: left;
+	display: inline-block;
+}
+.right{
+	float: right;
+
+}
+.clearfix_ri{
+	clear: right;
+}
+
+.tringle{
+	 margin-top: 0;
+}
+.red_tringle_top{
+	width:0;
+	height:0;
+	border-left:1em solid transparent;
+	border-right:1em solid transparent;
+	border-bottom:1.5em solid red;
+}
+.red_tringle_bottom{
+	width:0;
+	height:0;
+	border-left:1em solid transparent;
+	border-right:1em solid transparent;
+	border-top:1.5em solid red;
+	margin:  0 !important;
+	padding: 0 !important;
+}
+
+.green_tringle_top{
+	width:0;
+	height:0;
+	border-left:2rem solid transparent;
+	border-right:2rem solid transparent;
+	border-bottom:2rem solid green;
+}
+.green_tringle_bottom{
+	width:0;
+	height:0;
+	border-left:2rem solid transparent;
+	border-right:2rem solid transparent;
+	border-top:2rem solid green;
+}
+
+/* the css style important rank sort by */
+.active_box{
+	 border-color: #6f6f6f !important;
+	 background-color: #eeeeee !important;
+}
+
+
+.active_circle{
+	 background-color: #7d7d7d !important;
+}
+
+
+.arrow_down{
+	width:0;
+	height:0;
+	border-left:.5em solid transparent;
+	border-right:.5em solid transparent;
+	border-top:.8em solid #7d7d7d;
+	display: inline-block;
+}
+
+.arrow_top{
+	width:0;
+	height:0;
+	border-left:.5em solid transparent;
+	border-right:.5em solid transparent;
+	border-bottom:.8em solid #7d7d7d;
+	display: inline-block;
+}
+
+
+
+
+/*********       publice        css       end ************/
+.container_wrap{                   /* total wrapper */
+	 background: #ffffff;
+	 width: 100% ;
+	 height: 100% ;
+
+}
+.page_title{
+	/* TODO height 2.7% */
+	 text-align: center;
+	 height: 2.7%;
+	font-size: 1em;
+}
+.row_title,.curr_goods{
+   font-size: 1.25em;
+}
+.row_title{
+	  color: #6f6f6f;
+}
+.curr_goods{
+	 color: #919191;
+}
+.curr_month{
+	 float: right;
+	margin-right: 8%;
+}
+.indContainer,.indecatorArr{
+    background: #eeeeee;
+	margin: 0 auto 0 auto;
+	width: 100%;
+}
+
+.indContainer{
+	/* padding-left-right 18px top 20px*/
+	/* the parent width 100% 750px*/
+  /* height 682
+   page height 1334
+  */
+  padding:2.6% 0 0 8% ;
+  height: 55%;  /*  55% */
+}
+.curr_goods{
+	 color: #cccccc;
+	 display: inline-block;
+	 margin-bottom: 20px;
+}
+
+.inde{
+    /*   width 346 height 160
+        the parent elem  width  750 height 682
+        now 175 * 83
+        46 * 23 %
+    */
+	width: 46%;
+	height: 23%;
+	background: white;
+	padding: 2% 3% 15% 2%;
+	border: 1px solid #cccccc;
+	border-radius: 5%;
+    margin-bottom: 2%;
+
+	/*box-shadow: 1px 1px black;*/
+}
+
+.curr_inde_title{
+	font-size: 0.4rem;
+	color: #6f6f6f;
+	font-weight: 600;
+	line-height: 1.2rem;
+	height: 1rem;
+    margin-bottom: 5%;
+	display: inline-block;
+}
+
+.curr_data{
+    font-size: 2.2rem;
+	color: #6f6f6f;
+	display: block;
+	margin-left: 20%;
+	margin-top: -4%;
+}
+.last_data{
+	 font-size: 1.8rem;
+	 color: #5a7c96;
+	display: block;
+	 margin-left: 37%;
+	margin-top: -3%;
+
+}
+
+
+.inde:nth-child(even){
+	  margin-right: 2%;  /*2%*/
+
+}
+
+.togglePage{
+    width: 100%;
+	height: 2em;
+	background: #eeeeee;
+	text-align: center;
+	margin-top: 1%;
+
+
+}
+.togglePage a:first-child{
+	 margin-right: 3%;
+	margin-left: -6%;
+}
+
+.toggle_circle{
+	 width: 10px;
+	 height: 10px ;
+	 border-radius: 50%;
+	 background: #cecece;
+	display: inline-block !important;
+}
+
+.indecatorArr{
+	/* box height 1334
+	   this height 520
+	*/
+	height: 39%;
+	position: relative;
+}
+
+
+.inde_detail{
+	  /*
+	  	 height 118px
+	  */
+	width: 100%;
+	height: 24.6%;
+	z-index: 10;
+	position: absolute;
+	background-color: rgba(229,229,229,0.1);
+	opacity: 0.8;
+	padding-top: 2%;
+	padding-left: 4%;
+}
+.sales_inde{
+	  margin-right: 1em;
+	  color: #ababab;
+}
+
+
+
+/******************/
+
+#wrapper {
+	position: absolute;
+	overflow: hidden;
+	left: 0;
+	top: 8%;
+	bottom: 0;
+	right:0;
+
+}
+
+
+#scroller li {
+	padding: 0 10px;
+	height: 40px;
+	line-height: 40px;
+	background-color: #eee;
+	font-size: 1.2em;
+	color:#6f6f6f;
+
+
+}
+
+.obj_data{
+	 opacity: 0;
+}
+
+.curr_type_goods{
+	width: 100%;
+	border-radius: 5%;
+	background: white !important;
+	display: block;
+	z-index: 2000;
+	margin:2% 0 1% 0;
+
+}
+
+.type_rect{
+
+	 height: .7em;
+	 background-color: red;
+	 margin-top: 3%;
+     display: inline-block !important;
+	margin-left: 40%;
+
+
+}
+/**********************/
+
+
+
+/**************************** ipad  media query   css  start****************************/
+
+/* i5 max width 320px */
+@media screen and (max-device-width: 320px) and (min-device-width: 320px){
+	.tringle{
+
+	}
+	.curr_data{
+		font-size: 1.8rem;
+		margin-top: 0;
+	}
+	.last_data{
+		font-size: 1.3rem;
+		margin-top: -4%;
+	}
+	.indContainer{
+		height: 68%;
+	}
+    .curr_inde_title{
+        width: 58%;
+	}
+	.inde{
+		 height: 24%;
+		 padding-bottom: 8%;
+	}
+}
+
+/* galaxy 5 max width 320px */
+@media screen and (max-device-width: 360px) and (min-device-width: 360px){
+	.tringle{
+		margin-top: -25%;
+		margin-right: -20%;
+	}
+	.curr_data{
+		 font-size: 1.8rem;
+	}
+	.last_data{
+		 font-size: 1.5rem;
+		 margin-top: -4%;
+	}
+	.indContainer{
+		 height: 58%;
+	}
+
+}
+
+
+/* i6 max width 375px */
+@media screen and (max-device-width: 375px) {
+	 .inde{
+		  padding: 2% 8% 22% 2%;
+	 }
+	.tringle{
+		margin-top: 0;
+		margin-right: -18%;
+	}
+	.togglePage{
+		 margin-top: -1%;
+	}
+}
+
+
+/* ipad max width 768px*/
+@media screen and (min-device-width: 768px) {
+	.tringle{
+		margin-top: 0;
+		margin-bottom: 6%;
+
+	}
+	.curr_data{
+		font-size: 3.6rem;
+		margin-right: -30%;
+		margin-top: 2%;
+	}
+	.last_data{
+		font-size: 3rem;
+		margin-top: -4%;
+	}
+	.inde{
+		 padding-bottom: 16%;
+	}
+}
+
+/**************************** ipad  media query   css  end ************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
