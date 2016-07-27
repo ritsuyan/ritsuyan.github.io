@@ -110,9 +110,19 @@ span{
 }
 
 
+.swiper-pagination-bullet{
+	 display: inline-block !important;
+	background: #cecece !important;
 
+}
+.swiper-pagination-bullet:first-child{
+	  margin-right: 3%;
+}
+.swiper-pagination-bullet-active {
+	background: #7d7d7d !important;
+}
 
-/*********       publice        css       end ************/
+	/*********       publice        css       end ************/
 .container_wrap{                   /* total wrapper */
 	 background: #ffffff;
 	 width: 100% ;
@@ -168,7 +178,7 @@ span{
 	width: 46%;
 	height: 23%;
 	background: white;
-	padding: 2% 3% 15% 2%;
+	padding: 2% 3% 5% 2%;
 	border: 1px solid #cccccc;
 	border-radius: 5%;
     margin-bottom: 2%;
@@ -177,7 +187,7 @@ span{
 }
 
 .curr_inde_title{
-	font-size: 0.9rem;
+	font-size: 0.8em;
 	color: #6f6f6f;
 	font-weight: 600;
 	line-height: 1.2rem;
@@ -217,18 +227,7 @@ span{
 
 
 }
-.togglePage a:first-child{
-	 margin-right: 3%;
-	margin-left: -6%;
-}
 
-.toggle_circle{
-	 width: 10px;
-	 height: 10px ;
-	 border-radius: 50%;
-	 background: #cecece;
-	display: inline-block !important;
-}
 
 .indecatorArr{
 	/* box height 1334
@@ -398,7 +397,13 @@ span{
 
 
 
+/**************************** animate  start  ********************************/
 
+.show_width{
+	  transition: width 1s;
+}
+
+/**************************** animate end  *********************************/
 
 
 
