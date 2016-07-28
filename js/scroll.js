@@ -252,6 +252,7 @@ function  init(){
         var $curr_index = $(this).index('.inde');  // get the curr index in li arr ,the first is 0
         $(this).parent().find($('.active_box')).removeClass('active_box');
         $(this).addClass('active_box')
+
         $('.row_title').html($(this).attr('data-inde'))
         $('.sales_inde').find('a').html($(this).attr('data-inde'))
         for(var i = 0; i < list_goods_arr.length; i++){
@@ -324,6 +325,8 @@ function cre_tri(elem,curr_data,last_data){
 
 /************************** sort list goods begin ************************************************/
 var toggle_mark = false;
+var show_mark = false;
+
 function get_width(){
        var arr = [];
        for(var i = 0; i < document.getElementsByClassName('type_rect').length; i++){
@@ -332,6 +335,7 @@ function get_width(){
        }
       return arr;
 }
+
 function sort_by_mini(arr){
     // arr means the contain val arr
     var temp ;
@@ -347,9 +351,31 @@ function sort_by_mini(arr){
     return arr;
 }
 
-
 $('.sort_goods').on('click',sort_min_max)
-//$('.sort_li').on('click',sort_goods)
+
+$('.show_width').on('click',function(){
+    var curr_width = parseInt(this.style.width);
+    var show_width_arr = document.getElementsByClassName('show_width');
+
+    if(show_mark === false){
+          show_mark = function () {
+              for(var i = 0 ; i < show_width_arr.length; i++){
+                  show_width_arr[i].style.width = 0
+                  show_width_arr[i].innerHTML = transformArr( JSON.parse(  show_width_arr[i].parentNode.getAttribute('all_inde_obj')) )[i]
+              }
+              return true;
+          }()
+    } else {
+        show_mark = function () {
+
+            for(var i = 0 ; i < show_width_arr.length; i++){
+                show_width_arr[i].innerHTML = ""
+                show_width_arr[i].style.width = transformArr( JSON.parse(  show_width_arr[i].parentNode.getAttribute('all_inde_obj')) )[i].slice(0,2) * 1.3 + "px";
+            }
+            return false;
+        }()
+    }
+})
 
 function sort_min_max(){
     console.log(toggle_mark)
@@ -376,30 +402,30 @@ function sort_min() {
     }
     if ($('.sort_goods').hasClass('arrow_down')) {
         $('.sort_goods').removeClass('arrow_down').addClass('arrow_top')
-           return true;
-        }
-    }
-
-
-
-// sort max
-function sort_max() {
-    var curr_inde_arr = get_width();
-    console.log(curr_inde_arr)
-    var new_sort_arr = sort_by_mini(curr_inde_arr);
-    console.log(new_sort_arr.reverse())
-    for (var i = 0; i < 6; i++) {
-        document.getElementsByClassName('show_width')[i].style.width = 0 + 'px';
-        document.getElementsByClassName('show_width')[i].style.width = new_sort_arr.shift() + 'px';
-    }
-    if ($('.sort_goods').hasClass('arrow_top')) {
-        $('.sort_goods').removeClass('arrow_top').addClass('arrow_down')
-     return false;
+        return true;
     }
 }
 
 
-function sort_goods(){
+// sort max
+    function sort_max() {
+        var curr_inde_arr = get_width();
+        console.log(curr_inde_arr)
+        var new_sort_arr = sort_by_mini(curr_inde_arr);
+        console.log(new_sort_arr.reverse())
+        for (var i = 0; i < 6; i++) {
+            document.getElementsByClassName('show_width')[i].style.width = 0 + 'px';
+            document.getElementsByClassName('show_width')[i].style.width = new_sort_arr.shift() + 'px';
+        }
+        if ($('.sort_goods').hasClass('arrow_top')) {
+            $('.sort_goods').removeClass('arrow_top').addClass('arrow_down')
+            return false;
+        }
+    }
+
+
+// sort goods
+/*function sort_goods(){
      var re_list_arr = document.getElementsByClassName('list_goods');
       var    len = document.getElementsByClassName('list_goods').length;
     console.log(re_list_arr)
@@ -411,5 +437,21 @@ function sort_goods(){
       for(var i = 0 ; i < len; i++){
          $re_list[i].appendTo($('#scroll_list'))
       }
-}
+}*
 /************************** sort list goods end   ************************************************/
+
+
+
+/********************************** the dynamic parts  ************************************************/
+$('.inde').on('dblclick',dynamic_part)
+function dynamic_part(){
+   var last_inde_arr = $('.indContainer');
+    $('.indContainer').remove()
+    
+}
+
+
+
+/********************************** the dynamic parts end **********************************************/
+
+

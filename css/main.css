@@ -9,6 +9,7 @@
 *{
 	 margin: 0;
 	padding: 0;
+	transition: color 1s;
 }
 a:hover,link{
 	 text-decoration: none;
@@ -178,22 +179,24 @@ span{
 	width: 46%;
 	height: 23%;
 	background: white;
-	padding: 2% 3% 5% 2%;
+	padding: 2% 3% 1% 2%;
 	border: 1px solid #cccccc;
 	border-radius: 5%;
     margin-bottom: 2%;
+	overflow: hidden !important;
+	float: left;
 
 	/*box-shadow: 1px 1px black;*/
 }
 
 .curr_inde_title{
-	font-size: 0.8em;
+	font-size: 0.9rem;
 	color: #6f6f6f;
-	font-weight: 600;
 	line-height: 1.2rem;
 	height: 1rem;
-    margin-bottom: 5%;
-	display: inline-block;
+    display: inline-block;
+	float: left;
+	margin-bottom: 15%;
 }
 
 .curr_data{
@@ -201,7 +204,7 @@ span{
 	color: #6f6f6f;
 	display: block;
 	margin-left: 20%;
-	margin-top: -4%;
+	margin-top: 2%;
 }
 .last_data{
 	 font-size: 1.8rem;
@@ -224,6 +227,7 @@ span{
 	background: #eeeeee;
 	text-align: center;
 	margin-top: 1%;
+	margin-left: -8%;
 
 
 }
@@ -274,7 +278,7 @@ span{
 #scroller li {
 	padding: 0 10px;
 	height: 40px;
-	line-height: 40px;
+	line-height:1.2em;
 	background-color: #eee;
 	font-size: 1.2em;
 	color:#6f6f6f;
@@ -293,6 +297,7 @@ span{
 	display: block;
 	z-index: 2000;
 	margin:2% 0 1% 0;
+
 
 }
 
@@ -360,11 +365,11 @@ span{
 /* i6 max width 375px */
 @media screen and (max-device-width: 375px) {
 	 .inde{
-		  padding: 2% 8% 22% 2%;
+		  padding: 2% 8% 0 2%;
 	 }
 	.tringle{
 		margin-top: 0;
-		margin-right: -18%;
+		margin-right: 0 !important;
 	}
 	.togglePage{
 		 margin-top: -1%;
@@ -389,7 +394,7 @@ span{
 		margin-top: -4%;
 	}
 	.inde{
-		 padding-bottom: 16%;
+		 padding-bottom: 2%;
 	}
 }
 
@@ -401,14 +406,22 @@ span{
 
 .show_width{
 	  transition: width 1s;
+	  color: dimgray;
+	font-size: 1em;
 }
 
 /**************************** animate end  *********************************/
 
+/**************************** styles rewrite begin ******************************/
+.inde:nth-child(2n) {
+	margin-left: 4%;
+}
+/**************************** styles rewrite end******************************/
 
 
 
 
+/* height required
 
 
 
