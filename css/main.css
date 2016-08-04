@@ -422,8 +422,10 @@ span{
 .pla_title{
 	  position: absolute;
 	  left: 10%;
-	  top : 10%;
+	  top : 6%;
 	  font-family: normal;
+	  font-size: 1.6em;
+	  font-weight: bold;
 }
 
 

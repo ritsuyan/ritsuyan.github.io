@@ -491,9 +491,9 @@ function dynamic_part() {
             console.log(params)
             if (params.componentType === 'series') {
                 // 点击到了 markPoint 上
-
+                $('.pla_title').remove()
                 curr_title = params.seriesName + params.name + params.value;
-                var $title = '<em class="pla_title">' + params.seriesName + params.name + params.value + '</em>';
+                var $title = '<p class="pla_title">' + params.name + ":" + params.seriesName  + "是" + params.value + '</p>';
                 $('body').append($title)
             }
             else if (params.componentType === 'series') {
