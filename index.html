@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-      <meta name="apple-mobile-web-app-capable" content="yes">
-      <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <title>RitsuYan Io</title>
-       <link rel="stylesheet" href="./css/swiper.min.css">
-      <script src="./bower_components/jquery/dist/jquery.min.js"></script>
-      <script src="./js/jq_scroll.js"></script>
-      <script type="text/javascript" src="./bower_components/jquery-touchswipe/jquery.touchSwipe.min.js"></script>
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="./js/jq_scroll.js"></script>
+    <script type="text/javascript" src="./bower_components/jquery-touchswipe/jquery.touchSwipe.min.js"></script>
     <!--  <script src="./js/scroll.js"></script>
     <!-- Bootstrap -->
     <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -23,127 +24,138 @@
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-      <script type="text/javascript">
+    <script type="text/javascript">
           $(document).ready(function(){
               $("#wrapper").Scroll({line:1,speed:100,timer:1000,up:"but_up",down:"but_down"});
 
           })
       </script>
-  </head>
-  <body>
-  <div class="container_wrap">
-           <h1 class="page_title">KPI 模板 </h1>
+</head>
 
+<body>
+    <div class="container_wrap">
+        <h1 class="page_title">KPI 模板 </h1>
+        <div id="main"></div>
         <div class="row indContainer">
 
+
+
             <h2 class="row_title ">销售额</h2>
-                <p class="curr_goods">种类一</p>
+            <p class="curr_goods">种类一</p>
             <h4 class="curr_month">2013/07-2013/08</h4>
 
             <!--the grid begin   -->
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-            <div class="swiper-slide">
-            <div class="col-xs-6 inde sales_vs_last active_box" data-inde="销售额">
-                <p class="curr_inde_title">销售额  &nbsp;(元)</p>
-                <span class="tringle  right"></span>
-                <a href="#" class="curr_data">789,221,668</a>
-                <a href="#" class="last_data">623,878,456</a>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="col-xs-6 inde sales_vs_last active_box" data-inde="销售额">
+                            <p class="curr_inde_title">销售额 &nbsp;(元)</p>
+                            <span class="tringle  right"></span>
+                            <a href="#" class="curr_data">789,221,668</a>
+                            <a href="#" class="last_data">623,878,456</a>
+                        </div>
+
+                        <div class="col-xs-6 inde sales" data-inde="销售额vs目标销售额(元)">
+                            <p class="curr_inde_title">销售额vs<br>目标销售额 &nbsp; (元)</p>
+                            <span class="tringle right"></span>
+                            <a href="#" class="curr_data">789,221,668</a>
+                            <a href="#" class="last_data">623,878,456</a>
+                        </div>
+
+                        <div class="col-xs-6 inde average" data-inde="销售额vs去年销售额(元)">
+                            <p class="curr_inde_title">销售额vs<br>去年销售额 &nbsp; (元)</p>
+                            <span class="tringle right"></span>
+                            <a href="#" class="curr_data">789,221,668</a>
+                            <a href="#" class="last_data">623,878,456</a>
+                        </div>
+
+                        <div class="col-xs-6 inde profit" data-inde="销售额vs国内同类销售额(元)">
+                            <p class="curr_inde_title">销售额vs<br>国内同类销售额&nbsp;(元)</p>
+                            <span class="tringle right"></span>
+                            <a href="#" class="curr_data">789,221,668</a>
+                            <a href="#" class="last_data">623,878,456</a>
+                        </div>
+
+                        <div class="col-xs-6 inde total" data-inde="销售额vs国际同类销售额(元)">
+                            <p class="curr_inde_title">销售额vs<br>国际同类销售额&nbsp;(元)</p>
+                            <span class="tringle right"></span>
+                            <a href="#" class="curr_data">789,221,668</a>
+                            <a href="#" class="last_data">623,878,456</a>
+                        </div>
+
+                        <div class="col-xs-6 inde transaction" data-inde="总处方数">
+                            <p class="curr_inde_title">总处方数 &nbsp; (个)</p>
+                            <span class="tringle right"></span>
+                            <a href="#" class="curr_data">789,221,668</a>
+                            <a href="#" class="last_data">623,878,456</a>
+                        </div>
+                    </div>
+                    <!-- slide first page -->
+
+                    <div class="swiper-slide">
+                        <div class="col-xs-6 inde total" data-inde="销售额vs国际同类销售额(元)">
+                            <a class="curr_inde_title">销售额vs<br>国际同类销售额&nbsp;(元)</a>
+                            <span class="tringle right"></span>
+                            <a href="#" class="curr_data">789,221,668</a>
+                            <a href="#" class="last_data">623,878,456</a>
+                        </div>
+
+                        <div class="col-xs-6 inde transaction" data-inde="总处方数">
+                            <p class="curr_inde_title">总处方数 &nbsp; (个)</p>
+                            <span class="tringle right"></span>
+                            <a href="#" class="curr_data">789,221,668</a>
+                            <a href="#" class="last_data">623,878,456</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- wrapper  end -->
             </div>
-
-             <div class="col-xs-6 inde sales" data-inde="销售额vs目标销售额(元)">
-                 <p class="curr_inde_title">销售额vs<br>目标销售额  &nbsp; (元)</p>
-                 <span class="tringle right"></span>
-                 <a href="#" class="curr_data">789,221,668</a>
-                 <a href="#" class="last_data">623,878,456</a>
-            </div>
-
-             <div class="col-xs-6 inde average" data-inde="销售额vs去年销售额(元)">
-                 <p class="curr_inde_title">销售额vs<br>去年销售额  &nbsp; (元)</p>
-                 <span class="tringle right"></span>
-                 <a href="#" class="curr_data">789,221,668</a>
-                 <a href="#" class="last_data">623,878,456</a>
-            </div>
-
-             <div class="col-xs-6 inde profit" data-inde="销售额vs国内同类销售额(元)">
-                 <p class="curr_inde_title">销售额vs<br>国内同类销售额&nbsp;(元)</p>
-                 <span class="tringle right"></span>
-                 <a href="#" class="curr_data">789,221,668</a>
-                 <a href="#" class="last_data">623,878,456</a>
-            </div>
-
-             <div class="col-xs-6 inde total" data-inde="销售额vs国际同类销售额(元)">
-                 <p class="curr_inde_title">销售额vs<br>国际同类销售额&nbsp;(元)</p>
-                 <span class="tringle right"></span>
-                 <a href="#" class="curr_data">789,221,668</a>
-                 <a href="#" class="last_data">623,878,456</a>
-            </div>
-
-             <div class="col-xs-6 inde transaction" data-inde="总处方数">
-                 <p class="curr_inde_title">总处方数  &nbsp; (个)</p>
-                 <span class="tringle right"></span>
-                 <a href="#" class="curr_data">789,221,668</a>
-                 <a href="#" class="last_data">623,878,456</a>
-            </div>
-             </div>  <!-- slide first page -->
-
-             <div class="swiper-slide">
-                 <div class="col-xs-6 inde total" data-inde="销售额vs国际同类销售额(元)">
-                     <a class="curr_inde_title">销售额vs<br>国际同类销售额&nbsp;(元)</a>
-                     <span class="tringle right"></span>
-                     <a href="#" class="curr_data">789,221,668</a>
-                     <a href="#" class="last_data">623,878,456</a>
-                 </div>
-
-                 <div class="col-xs-6 inde transaction" data-inde="总处方数">
-                     <p class="curr_inde_title">总处方数  &nbsp; (个)</p>
-                     <span class="tringle right"></span>
-                     <a href="#" class="curr_data">789,221,668</a>
-                     <a href="#" class="last_data">623,878,456</a>
-                 </div>
-             </div>
-             </div>     <!-- wrapper  end -->
-              </div>   <!-- swipe container-->
+            <!-- swipe container-->
 
             <!-- wait to dynamic add -->
             <!-- the grid end     -->
 
             <div class="clearfix"></div>
-      <div class="swiper-pagination togglePage left">
+            <div class="swiper-pagination togglePage left">
 
-            </div>   <!-- togglePage  end -->
-        </div>  <!--  indeContainer end -->
+            </div>
+            <!-- togglePage  end -->
+        </div>
+        <!--  indeContainer end -->
 
 
 
         <div class="indecatorArr">
             <div class="inde_detail">
-                <span ><i class=" sort_li arrow_down"></i>&nbsp;类别</span>
-                <span class="right sales_inde"><a>销售额 </a> <i class="sort_goods arrow_top"></i></span>
-            </div>   <!-- indecatorArr  end -->
+                <span><i class=" sort_li arrow_down"></i>&nbsp;类别</span>
+                <span class="right sales_inde"><a class="curr_inde">销售额</a> <i class="sort_goods arrow_top"></i></span>
+            </div>
+            <!-- indecatorArr  end -->
 
             <div id="wrapper">
                 <div id="scroller">
                     <ul id="scroll_list">
                         <li class="curr_type_goods list_goods">种类一 <span class="show_width"></span></li>
-                        <li class="list_goods">种类二    <span class="show_width"></span></li>
-                        <li class="list_goods">种类三    <span class="show_width"></span></li>
-                        <li class="list_goods">种类四    <span class="show_width"></span></li>
-                        <li class="list_goods">种类五    <span class="show_width"></span></li>
-                        <li class="list_goods">种类六    <span class="show_width"></span></li>
+                        <li class="list_goods">种类二 <span class="show_width"></span></li>
+                        <li class="list_goods">种类三 <span class="show_width"></span></li>
+                        <li class="list_goods">种类四 <span class="show_width"></span></li>
+                        <li class="list_goods">种类五 <span class="show_width"></span></li>
+                        <li class="list_goods">种类六 <span class="show_width"></span></li>
                     </ul>
                 </div>
             </div>
-  </div>
-</div>     <!-- container_wrapper end  -->
+        </div>
+    </div>
+    <!-- container_wrapper end  -->
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
 
- <script src="./js/scroll.js" ></script>
-  <script src="./js/swiper.min.js"></script>
-  <script>
+    <script src="./js/scroll.js"></script>
+    <script src="./js/swiper.min.js"></script>
+    <script src="./bower_components/echarts/dist/echarts.min.js"></script>
+    <script>
       var swiper = new Swiper('.swiper-container', {
           nextButton: '.swiper-button-next',
           prevButton: '.swiper-button-prev',
@@ -151,5 +163,9 @@
           paginationType: 'bullets'
       });
   </script>
-  </body>
+
+    <!--  sec echarts config -->
+
+</body>
+
 </html>

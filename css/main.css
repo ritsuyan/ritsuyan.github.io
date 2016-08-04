@@ -419,6 +419,12 @@ span{
 /**************************** styles rewrite end******************************/
 
 
+.pla_title{
+	  position: absolute;
+	  left: 10%;
+	  top : 10%;
+	  font-family: normal;
+}
 
 
 /* height required

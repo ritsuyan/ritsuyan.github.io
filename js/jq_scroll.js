@@ -64,6 +64,44 @@ $.fn.extend({
     
       if(direction === 'up'){
             scrollUp()
+            var curr_goods = document.getElementsByClassName('curr_type_goods')[0];
+            var curr_inde = document.getElementsByClassName('curr_inde')[0].firstChild.nodeValue.trim();   // 当前属性
+          if ( Object.keys(mock_data).indexOf(curr_goods.firstChild.nodeValue.trim()) !== -1) { // 当前种类 ? 3
+              var curr_index =  Object.keys(mock_data).indexOf(curr_goods.firstChild.nodeValue.trim()); // 当前种类位置
+              var all_curr_data = transformArr(new_mock_arr[curr_index]);  // 当前种类所有月份数据 数组格式
+              var arr_push = [] ;                                           // 填充当前属性的数组
+              var inde_index = Object.keys(transformArr(new_mock_arr[0])[0]).indexOf(curr_inde) ;
+              console.log(inde_index)
+              for (var i = 0; i < all_curr_data.length; i++) {
+                  arr_push.push(transformArr(all_curr_data[i])[inde_index])
+              }
+              console.log(arr_push)
+              // 基于准备好的dom，初始化echarts实例
+              var myChart = echarts.init(document.getElementById('main'));
+
+              // 指定图表的配置项和数据
+              var option = {
+                  title: {
+                      text: '柱形图'
+                  },
+                  tooltip: {},
+                  legend: {
+                      data: ["销量"] //into_detail_page().legend
+                  },
+                  xAxis: {
+                      data: ["一月", "二月", "三月", "四月", "五月","六月", "七月", "八月", "九月", "十月" , "十一月", "十二月"]
+                  },
+                  yAxis: {},
+                  series: [{
+                      name: '销量',
+                      type: 'bar',
+                      data: trans_arr(arr_push)
+                  }]
+              };
+
+              // 使用刚指定的配置项和数据显示图表。
+              myChart.setOption(option);
+          }
             console.log('up')
       }
     }
