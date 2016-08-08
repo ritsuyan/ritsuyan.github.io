@@ -814,6 +814,74 @@ function loop_val_month(choose_month) {
 
 
 
-/**********************************  toggle charts data   start *********************************************/
+/**********************************  toggle percentage data   start *********************************************/
 
-/**********************************  toggle charts data   end   *********************************************/
+var startX, startY, moveEndX, moveEndY, X, Y;
+var $curr_per = false;
+$("#wrapper").on("touchstart", function(e) {
+    e.preventDefault();
+    startX = e.originalEvent.changedTouches[0].pageX,
+        startY = e.originalEvent.changedTouches[0].pageY;
+});
+$("#wrapper").on("touchmove", function(e) {
+    e.preventDefault();
+    moveEndX = e.originalEvent.changedTouches[0].pageX,
+        moveEndY = e.originalEvent.changedTouches[0].pageY,
+        X = moveEndX - startX,
+        Y = moveEndY - startY;
+
+    if ( Math.abs(X) > Math.abs(Y) && X > 0 ) {
+
+        $('.show_width').addClass('toggle_show_width');
+
+        $curr_per = toggle_percent()
+        setTimeout("$('.show_width').removeClass('toggle_show_width')",1000)
+    }
+    else if ( Math.abs(X) > Math.abs(Y) && X < 0 ) {
+     //   alert("right 2 left");
+    }
+    else if ( Math.abs(Y) > Math.abs(X) && Y > 0) {
+     //   alert("top 2 bottom");
+    }
+    else if ( Math.abs(Y) > Math.abs(X) && Y < 0 ) {
+       // alert("bottom 2 top");
+    }
+    else{
+      //  alert("just touch");
+    }
+});
+
+function toggle_percent(){
+    var all_inde = document.getElementsByClassName('inde');
+    var len     = all_inde.length;
+    function trans_num(str){
+        // default string 777,222,333
+    return  str = str.split(',').join('')
+    }
+
+    if($curr_per === false ) {
+        for (var i = 0; i < len; i++) {
+            var $curr_data = all_inde[i].getElementsByClassName('curr_data')[0].firstChild.nodeValue;
+            var $last_data = all_inde[i].getElementsByClassName('last_data')[0];
+            var $per_num = Number(String(trans_num($curr_data) / trans_num($last_data.firstChild.nodeValue)).slice(0, 5)) * 100 + "%";
+            all_inde[i].setAttribute('last_data',$last_data.firstChild.nodeValue)
+            $last_data.innerHTML = $per_num
+            $($last_data).addClass('toggle_per_color')
+
+        }
+         return $curr_per = true;
+    } else{
+        for (var i = 0; i < len; i++) {
+            var $last_data = all_inde[i].getElementsByClassName('last_data')[0];
+            $last_data.innerHTML = all_inde[i].getAttribute('last_data')
+            $($last_data).removeClass('toggle_per_color')
+        }
+            return $curr_per = false;
+    }
+}
+
+
+
+
+
+/**********************************  toggle percentage data   end   *********************************************/

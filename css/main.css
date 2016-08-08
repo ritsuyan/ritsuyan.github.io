@@ -405,11 +405,15 @@ span{
 /**************************** animate  start  ********************************/
 
 .show_width{
-	  transition: width 1s;
+	  transition: all 1s ease;
 	  color: dimgray;
 	font-size: 1em;
 }
 
+.toggle_show_width{
+	 margin-left: 20%;
+	transition: all 1s ease;
+}
 /**************************** animate end  *********************************/
 
 /**************************** styles rewrite begin ******************************/
@@ -428,6 +432,9 @@ span{
 	  font-weight: bold;
 }
 
+.toggle_per_color{
+	color: #3E6945;
+}
 
 /* height required
 
