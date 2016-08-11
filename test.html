@@ -4,67 +4,39 @@
     <meta charset="UTF-8">
     <title></title>
     <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="./js/hammer.min.js"></script>
     <style>
-        html,body{
-             height: 100%;
-            width: 100%;
-        }
         .rect{
-
-            width: 30%;
-            height: 30px;
-            background-color: red;
-
-
-        }
-        .wrapper{
-             margin-top: 10%;
-             padding-left: 60%;
+             background-color: whitesmoke;
+             width:1000px;
+             height:500px;
+             border-radius: 15%;
+            margin-bottom: 5%;
+             font-size: 20em;
         }
     </style>
 </head>
 <body>
     <div class="wrapper">
-        <div class="rect"></div>
+        <div class="rect" id="curr_rect"></div>
         <div class="rect"></div>
         <div class="rect"></div>
         <div class="rect"></div>
         <div class="rect"></div>
     </div>
-    <script>
 
-           var startX, startY, moveEndX, moveEndY, X, Y;
-
-           $(".wrapper").on("touchstart", function(e) {
-               e.preventDefault();
-               startX = e.originalEvent.changedTouches[0].pageX,
-                       startY = e.originalEvent.changedTouches[0].pageY;
-           });
-           $(".wrapper").on("touchmove", function(e) {
-               e.preventDefault();
-               moveEndX = e.originalEvent.changedTouches[0].pageX,
-                       moveEndY = e.originalEvent.changedTouches[0].pageY,
-                       X = moveEndX - startX,
-                       Y = moveEndY - startY;
-
-               if ( Math.abs(X) > Math.abs(Y) && X > 0 ) {
-                   alert("left 2 right");
-               }
-               else if ( Math.abs(X) > Math.abs(Y) && X < 0 ) {
-                   alert("right 2 left");
-               }
-               else if ( Math.abs(Y) > Math.abs(X) && Y > 0) {
-                   alert("top 2 bottom");
-               }
-               else if ( Math.abs(Y) > Math.abs(X) && Y < 0 ) {
-                   alert("bottom 2 top");
-               }
-               else{
-                   alert("just touch");
-               }
-           });
+<script>
+     var $inde_arr = document.getElementsByClassName('rect');
+     for(var i = 0 ; i < $inde_arr.length; i++){
+          var hammertime = new Hammer($inde_arr[i]);
+          var that = this;
+          hammertime.on('doubletap', function (ev) {
+         alert(233)          })
+     }
 
 
-       </script>
+
+</script>
+
 </body>
 </html>

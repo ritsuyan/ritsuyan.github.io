@@ -93,14 +93,14 @@
                     <!-- slide first page -->
 
                     <div class="swiper-slide">
-                        <div class="col-xs-6 inde total" data-inde="销售额vs国际同类销售额(元)">
+                        <div class="col-xs-6 inde total" data-inde="page2_1(元)">
                             <a class="curr_inde_title">销售额vs<br>国际同类销售额&nbsp;(元)</a>
                             <span class="tringle right"></span>
                             <a href="#" class="curr_data">789,221,668</a>
                             <a href="#" class="last_data">623,878,456</a>
                         </div>
 
-                        <div class="col-xs-6 inde transaction" data-inde="总处方数">
+                        <div class="col-xs-6 inde transaction" data-inde="page2_2(元)">
                             <p class="curr_inde_title">总处方数 &nbsp; (个)</p>
                             <span class="tringle right"></span>
                             <a href="#" class="curr_data">789,221,668</a>
@@ -151,10 +151,11 @@
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
-
+    <script src="./js/hammer.min.js"></script>
     <script src="./js/scroll.js"></script>
     <script src="./js/swiper.min.js"></script>
     <script src="./bower_components/echarts/dist/echarts.min.js"></script>
+
     <script>
       var swiper = new Swiper('.swiper-container', {
           nextButton: '.swiper-button-next',
@@ -162,7 +163,10 @@
           pagination: '.swiper-pagination',
           paginationType: 'bullets'
       });
+
+
   </script>
+
 
     <!--  sec echarts config -->
 
