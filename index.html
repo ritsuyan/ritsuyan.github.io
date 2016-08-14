@@ -12,9 +12,6 @@
     <title>RitsuYan Io</title>
     <link rel="stylesheet" href="./css/swiper.min.css">
     <script src="./bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="./js/jq_scroll.js"></script>
-    <script type="text/javascript" src="./bower_components/jquery-touchswipe/jquery.touchSwipe.min.js"></script>
-    <!--  <script src="./js/scroll.js"></script>
     <!-- Bootstrap -->
     <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./css/main.css">
@@ -24,152 +21,312 @@
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script type="text/javascript">
-          $(document).ready(function(){
-              $("#wrapper").Scroll({line:1,speed:100,timer:1000,up:"but_up",down:"but_down"});
 
-          })
-      </script>
 </head>
 
 <body>
-    <div class="container_wrap">
-        <h1 class="page_title">KPI 模板 </h1>
-        <div id="main"></div>
-        <div class="row indContainer">
+    <h4 style="text-align: center;padding-top: 2%;margin-bottom: 2%">Sample - Prescriber Info</h4>
+    <div class="con_wrap">
+          <div class="left fixed_con">
+               <table id="fixed_table">
+                   <thead  id="fixed_table_title" class="table-head">
+                     <tr>
+                          <th>Prescriber</th>
+                     </tr>
+                   </thead>
+                   <tbody id="fixed-body" class="table-body">
+                     <tr>
+                         <td>CACCAMO,ALLAN</td>
+                     </tr>
+                   <tr>
+                       <td>CACCAMO,ALLAN</td>
+                   </tr>
+                   <tr>
+                       <td>CACCAMO,ALLAN</td>
+                   </tr>
+                   <tr>
+                       <td>CACCAMO,ALLAN</td>
+                   </tr>
+                   <tr>
+                       <td>CACCAMO,ALLAN</td>
+                   </tr>
+                   <tr>
+                       <td>CACCAMO,ALLAN</td>
+                   </tr>
+                   <tr>
+                       <td>CACCAMO,ALLAN</td>
+                   </tr>
+                   <tr>
+                       <td>CACCAMO,ALLAN</td>
+                   </tr>
+                   <tr>
+                       <td>CACCAMO,ALLAN</td>
+                   </tr>
+                   <tr>
+                       <td>CACCAMO,ALLAN</td>
+                   </tr>
+                   <tr>
+                       <td>CACCAMO,ALLAN</td>
+                   </tr>
+                   <tr>
+                       <td>CACCAMO,ALLAN</td>
+                   </tr>
+                   <tr>
+                       <td>CACCAMO,ALLAN</td>
+                   </tr>
+                   <tr>
+                       <td>CACCAMO,ALLAN</td>
+                   </tr>
+                   <tr>
+                       <td>CACCAMO,ALLAN</td>
+                   </tr>
+                   <tr>
+                       <td>CACCAMO,ALLAN</td>
+                   </tr>
+                     <tr>
+                         <td>CACCAMO,ALLAN</td>
+                     </tr>
+                   </tbody>         <!-- tbody end -->
+
+               </table>   <!-- fixed_table_title end -->
+          </div>            <!-- fixed-con end -->
+
+          <div class="left swipe_con">
+               <table id="swipe_table">
+                   <thead id="swipe_table_title" class="table-head">
+                      <tr >
+                           <th>Territory</th>
+                           <th>Specilaty</th>
+                           <th>City,State</th>
+                           <th>Zip</th>
+                           <th>CMVSPM</th>
+                           <th>CMVSP4</th>
+                           <th>CMVSP4</th>
+                           <th>CMVSP4</th>
+                           <th>CMVSP4</th>
+                           <th>CMVSP4</th>
+
+                      </tr>
+                     <!-- th end -->
+                   </thead>
+
+                   <tbody id="swiper-body" class="table-body">
+                      <tr class="alt swiper-slide">
+                           <td>12BA1</td>
+                           <td>FP</td>
+                           <td>OAKLAND,ME</td>
+                           <td>04963</td>
+                           <td>100%</td>
+                           <td>-100%</td>
+                           <td>-100%</td>
+                           <td>-100%</td>
+                           <td>-100%</td>
+                           <td>-100%</td>
+                      </tr>
+                   <tr class="swiper-slide">
+                       <td>12BA1</td>
+                       <td>FP</td>
+                       <td>OAKLAND,ME</td>
+                       <td>04963</td>
+                       <td>100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                   </tr>
+                   <tr class="alt swiper-slide">
+                       <td>12BA1</td>
+                       <td>FP</td>
+                       <td>OAKLAND,ME</td>
+                       <td>04963</td>
+                       <td>100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                   </tr>
+                   <tr class="swiper-slide">
+                       <td>12BA1</td>
+                       <td>FP</td>
+                       <td>OAKLAND,ME</td>
+                       <td>04963</td>
+                       <td>100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                   </tr>
+                   <tr class="alt swiper-slide">
+                       <td>12BA1</td>
+                       <td>FP</td>
+                       <td>OAKLAND,ME</td>
+                       <td>04963</td>
+                       <td>100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                   </tr>
+                   <tr class="swiper-slide">
+                       <td>12BA1</td>
+                       <td>FP</td>
+                       <td>OAKLAND,ME</td>
+                       <td>04963</td>
+                       <td>100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                   </tr>
+                   <tr class="alt swiper-slide">
+                       <td>12BA1</td>
+                       <td>FP</td>
+                       <td>OAKLAND,ME</td>
+                       <td>04963</td>
+                       <td>100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                   </tr>
+                   <tr class="swiper-slide">
+                       <td>12BA1</td>
+                       <td>FP</td>
+                       <td>OAKLAND,ME</td>
+                       <td>04963</td>
+                       <td>100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                   </tr>
+                   <tr class="alt swiper-slide">
+                       <td>12BA1</td>
+                       <td>FP</td>
+                       <td>OAKLAND,ME</td>
+                       <td>04963</td>
+                       <td>100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                   </tr>
+                   <tr class="swiper-slide">
+                       <td>12BA1</td>
+                       <td>FP</td>
+                       <td>OAKLAND,ME</td>
+                       <td>04963</td>
+                       <td>100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                   </tr>
+                   <tr class="alt swiper-slide">
+                       <td>12BA1</td>
+                       <td>FP</td>
+                       <td>OAKLAND,ME</td>
+                       <td>04963</td>
+                       <td>100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                   </tr>
+                   <tr class="swiper-slide">
+                       <td>12BA1</td>
+                       <td>FP</td>
+                       <td>OAKLAND,ME</td>
+                       <td>04963</td>
+                       <td>100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                   </tr>
+                   <tr class="alt swiper-slide">
+                       <td>12BA1</td>
+                       <td>FP</td>
+                       <td>OAKLAND,ME</td>
+                       <td>04963</td>
+                       <td>100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                   </tr>
+                   <tr class="swiper-slide">
+                       <td>12BA1</td>
+                       <td>FP</td>
+                       <td>OAKLAND,ME</td>
+                       <td>04963</td>
+                       <td>100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                       <td>-100%</td>
+                   </tr>
+                      <tr class="alt swiper-slide">
+                          <td>12BA1</td>
+                          <td>FP</td>
+                          <td>OAKLAND,ME</td>
+                          <td>04963</td>
+                          <td>100%</td>
+                          <td>-100%</td>
+                          <td>-100%</td>
+                          <td>-100%</td>
+                          <td>-100%</td>
+                          <td>-100%</td>
+                      </tr>
+                      <tr class="swiper-slide">
+                          <td>12BA1</td>
+                          <td>FP</td>
+                          <td>OAKLAND,ME</td>
+                          <td>04963</td>
+                          <td>100%</td>
+                          <td>-100%</td>
+                          <td>-100%</td>
+                          <td>-100%</td>
+                          <td>-100%</td>
+                          <td>-100%</td>
+                      </tr>
+                      <tr class="alt swiper-slide">
+                          <td>12BA1</td>
+                          <td>FP</td>
+                          <td>OAKLAND,ME</td>
+                          <td>04963</td>
+                          <td>100%</td>
+                          <td>-100%</td>
+                          <td>-100%</td>
+                          <td>-100%</td>
+                          <td>-100%</td>
+                          <td>-100%</td>
+                      </tr>
+                   </tbody>
 
 
+               </table>   <!-- swipe table end -->
+          </div> <!-- swipe_con end -->
+    </div>  <!-- con_wrap end -->
 
-            <h2 class="row_title ">销售额</h2>
-            <p class="curr_goods">种类一</p>
-            <h4 class="curr_month">2013/07-2013/08</h4>
-
-            <!--the grid begin   -->
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="col-xs-6 inde sales_vs_last active_box" data-inde="销售额">
-                            <p class="curr_inde_title">销售额 &nbsp;(元)</p>
-                            <span class="tringle  right"></span>
-                            <a href="#" class="curr_data">789,221,668</a>
-                            <a href="#" class="last_data">623,878,456</a>
-                        </div>
-
-                        <div class="col-xs-6 inde sales" data-inde="销售额vs目标销售额(元)">
-                            <p class="curr_inde_title">销售额vs<br>目标销售额 &nbsp; (元)</p>
-                            <span class="tringle right"></span>
-                            <a href="#" class="curr_data">789,221,668</a>
-                            <a href="#" class="last_data">623,878,456</a>
-                        </div>
-
-                        <div class="col-xs-6 inde average" data-inde="销售额vs去年销售额(元)">
-                            <p class="curr_inde_title">销售额vs<br>去年销售额 &nbsp; (元)</p>
-                            <span class="tringle right"></span>
-                            <a href="#" class="curr_data">789,221,668</a>
-                            <a href="#" class="last_data">623,878,456</a>
-                        </div>
-
-                        <div class="col-xs-6 inde profit" data-inde="销售额vs国内同类销售额(元)">
-                            <p class="curr_inde_title">销售额vs<br>国内同类销售额&nbsp;(元)</p>
-                            <span class="tringle right"></span>
-                            <a href="#" class="curr_data">789,221,668</a>
-                            <a href="#" class="last_data">623,878,456</a>
-                        </div>
-
-                        <div class="col-xs-6 inde total" data-inde="销售额vs国际同类销售额(元)">
-                            <p class="curr_inde_title">销售额vs<br>国际同类销售额&nbsp;(元)</p>
-                            <span class="tringle right"></span>
-                            <a href="#" class="curr_data">789,221,668</a>
-                            <a href="#" class="last_data">623,878,456</a>
-                        </div>
-
-                        <div class="col-xs-6 inde transaction" data-inde="总处方数">
-                            <p class="curr_inde_title">总处方数 &nbsp; (个)</p>
-                            <span class="tringle right"></span>
-                            <a href="#" class="curr_data">789,221,668</a>
-                            <a href="#" class="last_data">623,878,456</a>
-                        </div>
-                    </div>
-                    <!-- slide first page -->
-
-                    <div class="swiper-slide">
-                        <div class="col-xs-6 inde total" data-inde="page2_1(元)">
-                            <a class="curr_inde_title">销售额vs<br>国际同类销售额&nbsp;(元)</a>
-                            <span class="tringle right"></span>
-                            <a href="#" class="curr_data">789,221,668</a>
-                            <a href="#" class="last_data">623,878,456</a>
-                        </div>
-
-                        <div class="col-xs-6 inde transaction" data-inde="page2_2(元)">
-                            <p class="curr_inde_title">总处方数 &nbsp; (个)</p>
-                            <span class="tringle right"></span>
-                            <a href="#" class="curr_data">789,221,668</a>
-                            <a href="#" class="last_data">623,878,456</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- wrapper  end -->
-            </div>
-            <!-- swipe container-->
-
-            <!-- wait to dynamic add -->
-            <!-- the grid end     -->
-
-            <div class="clearfix"></div>
-            <div class="swiper-pagination togglePage left">
-
-            </div>
-            <!-- togglePage  end -->
-        </div>
-        <!--  indeContainer end -->
-
-
-
-        <div class="indecatorArr">
-            <div class="inde_detail">
-                <span><i class=" sort_li arrow_down"></i>&nbsp;类别</span>
-                <span class="right sales_inde"><a class="curr_inde">销售额</a> <i class="sort_goods arrow_top"></i></span>
-            </div>
-            <!-- indecatorArr  end -->
-
-            <div id="wrapper">
-                <div id="scroller">
-                    <ul id="scroll_list">
-                        <li class="curr_type_goods list_goods">种类一 <span class="show_width"></span></li>
-                        <li class="list_goods">种类二 <span class="show_width"></span></li>
-                        <li class="list_goods">种类三 <span class="show_width"></span></li>
-                        <li class="list_goods">种类四 <span class="show_width"></span></li>
-                        <li class="list_goods">种类五 <span class="show_width"></span></li>
-                        <li class="list_goods">种类六 <span class="show_width"></span></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- container_wrapper end  -->
-
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
     <script src="./js/hammer.min.js"></script>
-    <script src="./js/scroll.js"></script>
-    <script src="./js/swiper.min.js"></script>
-    <script src="./bower_components/echarts/dist/echarts.min.js"></script>
+    <script src="./js/touch.js"></script>
+    <script src="./js/jquery-scrolltofixed-min.js"></script>
 
-    <script>
-      var swiper = new Swiper('.swiper-container', {
-          nextButton: '.swiper-button-next',
-          prevButton: '.swiper-button-prev',
-          pagination: '.swiper-pagination',
-          paginationType: 'bullets'
-      });
-
-
-  </script>
-
-
-    <!--  sec echarts config -->
 
 </body>
-
 </html>
