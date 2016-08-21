@@ -68,8 +68,8 @@ Slider.prototype.bindDOM = function(){
 
                     console.log('curr offset Y ' + self.offsetY)
                     self.wrap.style.webkitTransition = ('-webkit-transform 0s ease-out');
-                    self.wrap.style.webkitTransform = ('translateY(' + self.offsetY + "px" )
-                    self.addtion.style.webkitTransform = ('translateY(' + self.offsetY + "px" )
+                    self.wrap.style.webkitTransform = ('translate3d(0px,'+ self.offsetY +'px,0)');
+                    self.addtion.style.webkitTransform = ('translate3d(0px,'+ self.offsetY +'px,0)');
 
                 }
             }
